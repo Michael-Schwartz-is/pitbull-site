@@ -4,9 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="פיטבול - ג'יוגיטסו ברזילאי - רועי נאמן">
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="ניווט ראשי">
     <div class="navbar-container">
-      <a href="/" class="navbar-logo">
+      <a href="/" class="navbar-logo" aria-label="פיטבול ישראל">
         <span>פיטבול</span>
         <span class="smaller">ישראל</span>
       </a>
@@ -18,24 +18,25 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </nav>
 
+  <main>
   <!-- Hero -->
-  <div class="section hero">
+  <header class="section hero">
     <div class="wrapper hero">
       <div class="text-wrap">
-        <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="hero-logo" />
+        <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="hero-logo" width="200" height="200" />
         <h1>ג'יו ג'יטסו ברזילאי במרכז תל אביב.</h1>
         <div class="text-block">לאמן את הגוף, לאתגר את המוח<br/>ולשחרר את הלחצים של היומיום.</div>
         <a href="#contact" class="main-cta">לתיאום אימון ניסיון</a>
       </div>
     </div>
     <div class="img-bg-wrap">
-      <img src="/images/hero-bg.jpg" alt="רועי נאמן פיטבול ישראל המורה מדגים תרגיל על תלמיד" class="bg-img" />
+      <img src="/images/hero-bg.webp" alt="רועי נאמן פיטבול ישראל המורה מדגים תרגיל על תלמיד" class="bg-img" width="2400" height="1163" fetchpriority="high" />
       <div class="bg-overlay"></div>
     </div>
-  </div>
+  </header>
 
   <!-- Schedule -->
-  <div id="shcedule" class="section time">
+  <section id="shcedule" class="section time" aria-label="מערכת שעות">
     <div class="wrapper">
       <div class="title-wrap">
         <h2>מערכת שעות שבועית</h2>
@@ -44,9 +45,9 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="wrapper time">
       <!-- Mobile label row -->
-      <div class="label-row mobile">
+      <div class="label-row mobile" aria-hidden="true">
         <div class="slot no-padding">
-          <img src="/images/logo.svg" width="50" alt="פיטבול ישראל הלוגו" class="schedule-logo" />
+          <img src="/images/logo.svg" width="50" height="50" alt="" class="schedule-logo" />
         </div>
         <div class="slot"><div class="label-text">08:00</div></div>
         <div class="slot"><div class="label-text">12:00</div></div>
@@ -56,11 +57,11 @@ import Layout from '../layouts/Layout.astro';
         <div class="slot"><div class="label-text">21:15</div></div>
       </div>
 
-      <div class="schedule-table">
+      <div class="schedule-table" aria-label="לוח זמנים שבועי">
         <!-- Desktop label column -->
-        <div class="label-row desktop">
+        <div class="label-row desktop" aria-hidden="true">
           <div class="slot no-padding">
-            <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="schedule-logo" />
+            <img src="/images/logo.svg" alt="" class="schedule-logo" width="50" height="50" />
           </div>
           <div class="slot"><div class="label-text">08:00</div></div>
           <div class="slot"><div class="label-text">12:00</div></div>
@@ -147,10 +148,10 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Testimonials -->
-  <div class="section testa">
+  <section class="section testa" aria-label="המלצות">
     <div class="wrapper testamonials">
       <div class="spacere">
         <h2>יש אנשים מכורים לספורט הזה</h2>
@@ -158,52 +159,52 @@ import Layout from '../layouts/Layout.astro';
       <div class="testemonials-wrap">
         <div class="person">
           <div class="testi-wrap">
-            <img src="/images/testimonial-yona.jpg" alt="תלמיד גיו גיטסו ברזילאי תלאביב" class="testi-img" />
+            <img src="/images/testimonial-yona.webp" alt="יונה, מתאמן גיו גיטסו" class="testi-img" width="327" height="308" loading="lazy" />
           </div>
           <div class="testi-text">
-            <p>"כל אימון גומר אותך פיזית, אתה מסיים אותו מזיע ועייף אבל בתחושת הצלחה והישג. והתחושה הזאת מחזיקה כמה ימים"</p>
+            <blockquote>"כל אימון גומר אותך פיזית, אתה מסיים אותו מזיע ועייף אבל בתחושת הצלחה והישג. והתחושה הזאת מחזיקה כמה ימים"</blockquote>
             <div class="testa-name">יונה, מהנדס הנדסות</div>
           </div>
         </div>
         <div class="person">
           <div class="testi-wrap">
-            <img src="/images/testimonial-yonatan.jpg" alt="תמונה של יונתן - מתאמן במכון גיוגיטסו" class="testi-img" />
+            <img src="/images/testimonial-yonatan.webp" alt="יונתן, מתאמן גיוגיטסו" class="testi-img" width="367" height="308" loading="lazy" />
           </div>
           <div class="testi-text">
-            <p>"זה ממש שינה לי את החיים, חשבתי שאני שונא את כל סוגי הספורט ולנצח אשאר בטטה, אבל גיוגיוטסו מאתגר גם את הגוף וגם את המוח אז אני מכור"</p>
+            <blockquote>"זה ממש שינה לי את החיים, חשבתי שאני שונא את כל סוגי הספורט ולנצח אשאר בטטה, אבל גיוגיוטסו מאתגר גם את הגוף וגם את המוח אז אני מכור"</blockquote>
             <div class="testa-name">יונתן, איש שיווק</div>
           </div>
         </div>
         <div class="person">
           <div class="testi-wrap">
-            <img src="/images/testimonial-simcha.jpg" alt="שמחה - חגורה כחולה" class="testi-img" />
+            <img src="/images/testimonial-simcha.webp" alt="שמחה, חגורה כחולה" class="testi-img" width="343" height="308" loading="lazy" />
           </div>
           <div class="testi-text">
-            <p>"עברתי בכמה מכונים בחיי אבל נשארתי אצל רועי נאמן כי מרגישים את המקצוענות ואת המסירות שלו, כל החיים שלו ג'יוגיטסו - מומחה מאוד גדול ומורה מצויין"</p>
+            <blockquote>"עברתי בכמה מכונים בחיי אבל נשארתי אצל רועי נאמן כי מרגישים את המקצוענות ואת המסירות שלו, כל החיים שלו ג'יוגיטסו - מומחה מאוד גדול ומורה מצויין"</blockquote>
             <div class="testa-name">שמחה, כלכלן</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Teacher -->
-  <div class="section teacher">
+  <section class="section teacher" aria-label="המאמן">
     <div class="wrapper teacher">
       <div class="text-wrapper">
         <h2>רועי נאמן</h2>
         <p class="paragraph-2">רועי נאמן – התמקצע בתורה במכון "באהה גרייסי פיטבול" בסן-דייגו בשנות ה-2000 המוקדמות. לאחר 8 שנים בקליפורניה בהם היתחרה והיתמקצע, חזר לארץ כחגורה שחורה, ייסד את טים פיטבול ישראל והחל ללמד את השיטה. כיום דאן 2 בג'יו-ג'יטסו תחת ג'ואו קוניה, דאן 3 תחת ריקרדו בובמן. רועי נאמן לוחם MMA מקצועני בעברו, עם ניסיון של למעלה מ-100 טורנירי הכנעות עם ובלי חליפה, זכה בעשרות מדליות בתחרויות בינלאומיות, וב 2007 זכה שלישי בעולם בסגנון No-Gi. מאמן ותיק ומוסמך וינגייט.</p>
       </div>
       <div class="image-wrapper">
-        <img src="/images/roi-teacher.jpg" width="465" alt="רועי נאמן מורה לגיוגיטסו ברזילאי בתל אביב לכל הרמות" class="teacher-img" />
+        <img src="/images/roi-teacher.webp" width="465" height="467" alt="רועי נאמן מורה לגיוגיטסו ברזילאי בתל אביב לכל הרמות" class="teacher-img" loading="lazy" />
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Why Now -->
-  <div class="section whynow">
+  <section class="section whynow" aria-label="למה להתחיל עכשיו">
     <div class="footer-image">
-      <img src="/images/seminar-group.jpg" loading="lazy" alt="מתאמנים בסמינר MMA במכון גיוגיטסו" />
+      <img src="/images/seminar-group.webp" loading="lazy" alt="מתאמנים בסמינר MMA במכון גיוגיטסו" width="1600" height="1066" />
     </div>
     <div class="wrapper why-now">
       <div>
@@ -212,10 +213,10 @@ import Layout from '../layouts/Layout.astro';
         <a href="#contact" class="main-cta">לתיאום אימון ניסיון</a>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- How to Start -->
-  <div class="section">
+  <section class="section" aria-label="איך מתחילים">
     <div class="wrapper start">
       <div class="title-wrap">
         <h2>איך מתחילים?</h2>
@@ -223,17 +224,17 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="stag-er">
         <div class="stage _01">
-          <div class="orange"><div class="big-no">01</div></div>
+          <div class="orange" aria-hidden="true"><div class="big-no">01</div></div>
           <h3 class="padd">שיחת התאמה &gt;&gt;</h3>
           <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי שמזיז את כל הגוף.</p>
         </div>
         <div class="stage">
-          <div class="orange"><div class="big-no">02</div></div>
+          <div class="orange" aria-hidden="true"><div class="big-no">02</div></div>
           <h3 class="padd">אימון ניסיון &gt;&gt;</h3>
           <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי שמזיז את כל הגוף.</p>
         </div>
         <div class="stage _03">
-          <div class="orange"><div class="big-no">03</div></div>
+          <div class="orange" aria-hidden="true"><div class="big-no">03</div></div>
           <h3 class="padd">התמדה ושיפור &gt;&gt;</h3>
           <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי ושמזיז את כל הגוף.</p>
         </div>
@@ -242,10 +243,10 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- What You'll Learn -->
-  <div class="section no-margin">
+  <section class="section no-margin" aria-label="מה לומדים">
     <div class="wrapper what-learn">
       <div class="title-wrap align-right">
         <h2>מה לומדים בטים פיטבול</h2>
@@ -253,62 +254,62 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="lessons-div">
         <div class="lesson">
-          <img src="/images/lesson-base.jpg" alt="רועי נאמן מברך את תלמידיו בסוף שיעור" class="lesson-img" />
+          <img src="/images/lesson-base.webp" alt="שיעורי בסיס - רועי נאמן מברך את תלמידיו" class="lesson-img" width="1200" height="773" loading="lazy" />
           <h3>שיעורי בסיס</h3>
           <p>העקרונות החשובים עליהם בנויה השיטה, החל מעמדות מוצא ועד ההכנעות הכי חשובות בספורט ועבור הגנה עצמית. איך להפיל, להשיג עמדת שליטה על הקרקע ולהכניע – ואיך להתגונן מפני כל אלה.</p>
         </div>
         <div class="lesson">
-          <img src="/images/lesson-advanced.jpg" alt="הדגמה של תרגיל מתקדם סוויפ" class="lesson-img" />
+          <img src="/images/lesson-advanced.webp" alt="ג'יו ג'יטסו מתקדמים - הדגמה של סוויפ" class="lesson-img" width="1600" height="1066" loading="lazy" />
           <h3>ג'יו ג'יטסו למתקדמים</h3>
           <p>טכניקות מתקדמות להגדלת ארגז הכלים, יותר גלגולים (ה"קרבות" שלנו, בהתנגדות גבוהה) וקצב יותר מהיר.</p>
         </div>
         <div class="lesson">
-          <img src="/images/lesson-mma.jpg" alt="טייקדאון כולל אחיזה על סביב הגוף" class="lesson-img" />
+          <img src="/images/lesson-mma.webp" alt="MMA - טייקדאון ואחיזה" class="lesson-img" width="1200" height="804" loading="lazy" />
           <h3>MMA - אומנויות לחימה משולבות</h3>
           <p>באימונים האלה אנחנו מוסיפים להיאבקות ולג'יו-ג'יטסו את מכות הידיים והרגליים, האיגרוף והמואי-תאי, וכמו כן את עבודת המכות על הקרקע. מתאים למקצוענים ולחובבנים, לאלה שרוצים להילחם עבור שכר ולאלה שמעוניינים לשפר את יכולת ההגנה העצמית.</p>
         </div>
         <div class="lesson">
-          <img src="/images/lesson-women.jpg" alt="נשים שמתאמנות באומנויות לחימה גיוגיטסו MMA" class="lesson-img" />
+          <img src="/images/lesson-women.webp" alt="ג'יו ג'יטסו לנשים - אימון אומנויות לחימה" class="lesson-img" width="1200" height="800" loading="lazy" />
           <h3>ג'יו ג'יטסו לנשים</h3>
           <p>בהדרכת נטלי לוריא, האשה החגורה שחורה הראשונה בשיטה בישראל. (כמובן שהנשים מוזמנות גם לכלל האימונים).</p>
         </div>
         <div class="lesson">
-          <img src="/images/lesson-nogi.jpg" alt="תמונה מתוך אימון NO GI" class="lesson-img" />
+          <img src="/images/lesson-nogi.webp" alt="NO GI - אימון היאבקות ללא חליפה" class="lesson-img" width="1200" height="737" loading="lazy" />
           <h3>שיעורים ללא חליפה - NO&nbsp;GI</h3>
           <p>אימוני היאבקות הכנעות מתקדמים ללא חליפה, No-Gi. סגנון יותר חופשי ודינמי.</p>
         </div>
         <div class="lesson">
-          <img src="/images/lesson-kids.jpg" alt="ספורט ואומנויות לחימה לילדים" class="lesson-img" />
+          <img src="/images/lesson-kids.webp" alt="ג'יוגיטסו לילדים - ספורט ואומנויות לחימה" class="lesson-img" width="1753" height="1178" loading="lazy" />
           <h3>ג'יוגיטסו לילדים</h3>
           <p>כל מה שטוב בג'יו-ג'יטסו, עם דגש על כבוד הדדי, משמעת, שיפור הריכוז והביטחון העצמי. אף פעם לא מוקדם מדי להתחיל.</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Why BJJ -->
-  <div class="section reasons-section">
+  <section class="section reasons-section" aria-label="למה ג'יו גיטסו">
     <div class="wrapper reasons-wrap">
       <div class="title-wrap">
         <h2>למה ג'יו גיטסו?</h2>
       </div>
       <div class="reasons-grid">
         <div class="reason">
-          <div class="orange"><div class="big-no">01</div></div>
+          <div class="orange" aria-hidden="true"><div class="big-no">01</div></div>
           <div class="text-div">
             <h3>אימון אינטנסיבי</h3>
             <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי שמזיז את כל הגוף.</p>
           </div>
         </div>
         <div class="reason">
-          <div class="orange"><div class="big-no">02</div></div>
+          <div class="orange" aria-hidden="true"><div class="big-no">02</div></div>
           <div class="text-div">
             <h3>ביטול מימד הכוח</h3>
             <p>היתרון הגדול של הספורט הוא שלא צריך להיות הכי חזק בשביל לנצח, טכניקה טובה מנצחת כוח.</p>
           </div>
         </div>
         <div class="reason">
-          <div class="orange"><div class="big-no">03</div></div>
+          <div class="orange" aria-hidden="true"><div class="big-no">03</div></div>
           <div class="text-div">
             <h3>מאתגר את השכל</h3>
             <p>האימון המנטלי והחידות הבלתי פוסקות מעסיקות יותר מהקושי הפיזי. ג'יו-ג'יטסו זה בית-ספר לפתרון בעיות</p>
@@ -321,20 +322,20 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Group photo -->
-  <div style="display:block;">
-    <img src="/images/group-photo.jpg" loading="lazy" alt="אנשים מהמכון של רועי נאמן מסתכלים למצלמה אחרי אימון" width="800" style="width:100%;" />
+  <div>
+    <img src="/images/group-photo.webp" loading="lazy" alt="קבוצת מתאמנים אחרי אימון במכון פיטבול ישראל" width="1600" height="1066" style="width:100%;display:block;" />
   </div>
 
   <!-- Contact -->
   <div>
-    <div id="contact" class="section contact">
+    <section id="contact" class="section contact" aria-label="צור קשר">
       <div class="wrapper contact">
         <div class="contact-inner">
           <div class="contact-logo-wrap">
-            <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="contact-logo" />
+            <img src="/images/logo.svg" alt="פיטבול ישראל" class="contact-logo" width="200" height="200" loading="lazy" />
           </div>
           <div>
             <h3>איך מגיעים אלינו?</h3>
@@ -343,11 +344,11 @@ import Layout from '../layouts/Layout.astro';
             <h3>לתיאום אימון ניסיון &gt;&gt;</h3>
             <div class="contact-links">
               <a href="https://wa.me/972542042035" class="link-block">
-                <img src="/images/icon-whatsapp.svg" alt="ווטצאפ" class="link-icon" />
+                <img src="/images/icon-whatsapp.svg" alt="" class="link-icon" width="40" height="40" />
                 <div>whatsapp</div>
               </a>
               <a href="tel:+972542042035" class="link-block">
-                <img src="/images/icon-phone.svg" alt="טלפון" class="link-icon" />
+                <img src="/images/icon-phone.svg" alt="" class="link-icon" width="40" height="40" />
                 <div>טלפון</div>
               </a>
             </div>
@@ -361,12 +362,14 @@ import Layout from '../layouts/Layout.astro';
             style="border:0;"
             allowfullscreen
             loading="lazy"
+            title="מפת הגעה למכון פיטבול ישראל"
           ></iframe>
         </div>
       </div>
-    </div>
-    <div class="footer">
+    </section>
+    <footer class="footer">
       <div>רועי נאמן ג'יו ג'יטסו תל אביב MMA פיטבול</div>
-    </div>
+    </footer>
   </div>
+  </main>
 </Layout>

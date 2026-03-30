@@ -1,22 +1,167 @@
 ---
 interface Props {
   title: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
 }
-const { title } = Astro.props;
+
+const {
+  title,
+  description = "ג'יוגיטסו ברזילאי במרכז תל אביב אצל רועי נאמן. ניסיון של 20+ שנה, חגורה שחורה דאן 3, מקום שלישי בעולם. אימונים לכל הרמות – GI, NO-GI, MMA, היאבקות, נשים וילדים.",
+  canonicalUrl = Astro.url.href,
+  ogImage = "/images/hero-bg.webp",
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="ג'יוגיטסו ברזילאי במרכז תל אביב אצל רועי נאמן ניסיון של 20 שנה. אצלנו מתאמנים גברים ונשים שמכיניסים כושר, תנועתיות, קרביות וביטחון עצמי לחיים שלהם, מפתחים הרגלים חיוביים, מייצרים איזון פנימי ותחושה טובה בין אימון לאימון." />
-  <meta property="og:title" content={title} />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- SEO -->
   <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Pitbull Israel - Roi Neeman" />
+  <meta name="keywords" content="ג'יוגיטסו, ג'יו ג'יטסו, BJJ, MMA, תל אביב, רועי נאמן, פיטבול, Brazilian Jiu-Jitsu, No-Gi, היאבקות, אומנויות לחימה, martial arts, Tel Aviv" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="Pitbull Israel BJJ" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Hreflang (for future bilingual) -->
+  <link rel="alternate" hreflang="he" href={canonicalUrl} />
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="fLiaA5T_ykM0RCpBP7Asg72r4jt2JEqAPV4Y3YdwxLw" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" type="image/webp" href="/images/hero-bg.webp" fetchpriority="high" />
+
+  <!-- Fonts: self-hosted woff2 -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/heebo-hebrew.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/heebo-latin.woff2" crossorigin />
+
+  <!-- Structured Data (JSON-LD) for AEO -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Pitbull Israel - Brazilian Jiu-Jitsu",
+    "alternateName": "פיטבול ישראל - ג'יוגיטסו ברזילאי",
+    "description": description,
+    "url": canonicalUrl,
+    "telephone": "+972542042035",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "רחוב בן שמן 4",
+      "addressLocality": "תל אביב",
+      "addressCountry": "IL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.075347,
+      "longitude": 34.794556
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "18:00", "closes": "21:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "19:00", "closes": "21:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "08:00", "closes": "21:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "18:30", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "19:15", "closes": "21:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "13:00" }
+    ],
+    "sameAs": ["https://wa.me/972542042035"],
+    "founder": {
+      "@type": "Person",
+      "name": "Roi Neeman",
+      "alternateName": "רועי נאמן",
+      "jobTitle": "Head Instructor",
+      "description": "Black belt 3rd Dan in Brazilian Jiu-Jitsu, former professional MMA fighter, 3rd place world ranking No-Gi 2007, Wingate certified coach"
+    },
+    "sport": "Brazilian Jiu-Jitsu",
+    "offers": {
+      "@type": "Offer",
+      "name": "אימון ניסיון",
+      "description": "Trial training session",
+      "price": "0",
+      "priceCurrency": "ILS"
+    }
+  })} />
+
+  <!-- FAQ Schema for AEO -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "מה זה ג'יו ג'יטסו ברזילאי?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ג'יו ג'יטסו ברזילאי (BJJ) הוא ספורט לחימה המתמקד בהיאבקות על הקרקע. היתרון הגדול הוא שטכניקה טובה מנצחת כוח, כך שמתאים לכל אחד ללא קשר לגודל או כוח."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם צריך ניסיון קודם כדי להתחיל?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לא! אימוני הבסיס שלנו מיועדים למתחילים לחלוטין. תלמדו את העקרונות החשובים מאפס – עמדות מוצא, שליטה על הקרקע, הכנעות והגנה עצמית."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "איפה המכון ומה שעות הפעילות?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "המכון נמצא ברחוב בן שמן 4, תל אביב. אימונים מתקיימים כל יום בשבוע – ימים א'-ה' בערב ויום שישי בבוקר (מזרון פתוח וניידות)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "מי המאמן?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "רועי נאמן, חגורה שחורה דאן 3, התמקצע במכון באהה גרייסי פיטבול בסן-דייגו. 8 שנות תחרות מקצועית בארה\"ב, מעל 100 טורנירים, מקום שלישי בעולם 2007 No-Gi. מאמן מוסמך וינגייט."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7TG0RFBLP"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E7TG0RFBLP');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script is:inline>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "cyne4c84wq");
+  </script>
 </head>
 <body>
   <slot />
@@ -24,8 +169,59 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+  /* Heebo — self-hosted, Hebrew subset */
+  @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/heebo-hebrew.woff2') format('woff2');
+    unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+  }
+  @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/heebo-hebrew.woff2') format('woff2');
+    unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+  }
+  @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/fonts/heebo-hebrew.woff2') format('woff2');
+    unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+  }
+  /* Heebo — self-hosted, Latin subset */
+  @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/heebo-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/heebo-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/fonts/heebo-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
   :root {
-    --orange-red: #ff681a;
+    --orange-red: #c44e0a;
     --black: #181818;
   }
 
@@ -182,7 +378,7 @@ const { title } = Astro.props;
   }
 
   .section.whynow {
-    background-image: linear-gradient(#0009, #0009), url('/images/seminar-group.jpg');
+    background-image: linear-gradient(#0009, #0009), url('/images/seminar-group.webp');
     background-position: 0 0, 50% 0;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
@@ -197,7 +393,7 @@ const { title } = Astro.props;
   }
 
   .section.contact {
-    background-image: linear-gradient(#00000078, #00000078), url('/images/group-photo.jpg');
+    background-image: linear-gradient(#00000078, #00000078), url('/images/group-photo.webp');
     background-position: 0 0, 0 0;
     background-size: auto, auto;
     background-attachment: scroll, fixed;
@@ -375,6 +571,13 @@ const { title } = Astro.props;
 
   .label-text {
     font-weight: 700;
+  }
+
+  blockquote {
+    font-style: normal;
+    margin: 0;
+    font-size: 18px;
+    line-height: 160%;
   }
 
   /* Testimonials */
