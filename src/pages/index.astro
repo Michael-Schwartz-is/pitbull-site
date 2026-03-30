@@ -1,0 +1,372 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="פיטבול - ג'יוגיטסו ברזילאי - רועי נאמן">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo">
+        <span>פיטבול</span>
+        <span class="smaller">ישראל</span>
+      </a>
+      <div class="navbar-buttons">
+        <a href="#contact" class="main-cta is-small">
+          <span class="is-desktop">לתיאום</span> אימון ניסיון
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="section hero">
+    <div class="wrapper hero">
+      <div class="text-wrap">
+        <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="hero-logo" />
+        <h1>ג'יו ג'יטסו ברזילאי במרכז תל אביב.</h1>
+        <div class="text-block">לאמן את הגוף, לאתגר את המוח<br/>ולשחרר את הלחצים של היומיום.</div>
+        <a href="#contact" class="main-cta">לתיאום אימון ניסיון</a>
+      </div>
+    </div>
+    <div class="img-bg-wrap">
+      <img src="/images/hero-bg.jpg" alt="רועי נאמן פיטבול ישראל המורה מדגים תרגיל על תלמיד" class="bg-img" />
+      <div class="bg-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Schedule -->
+  <div id="shcedule" class="section time">
+    <div class="wrapper">
+      <div class="title-wrap">
+        <h2>מערכת שעות שבועית</h2>
+        <div class="text-block">בואו להתאמן כל יום עם אנשים בעלי ניסיון תחרותי עשיר במרכז תל אביב. אימונים כל יום, <strong>7 ימים בשבוע.</strong></div>
+      </div>
+    </div>
+    <div class="wrapper time">
+      <!-- Mobile label row -->
+      <div class="label-row mobile">
+        <div class="slot no-padding">
+          <img src="/images/logo.svg" width="50" alt="פיטבול ישראל הלוגו" class="schedule-logo" />
+        </div>
+        <div class="slot"><div class="label-text">08:00</div></div>
+        <div class="slot"><div class="label-text">12:00</div></div>
+        <div class="slot"><div class="label-text">18:00</div></div>
+        <div class="slot"><div class="label-text">19:15</div></div>
+        <div class="slot"><div class="label-text">20:15</div></div>
+        <div class="slot"><div class="label-text">21:15</div></div>
+      </div>
+
+      <div class="schedule-table">
+        <!-- Desktop label column -->
+        <div class="label-row desktop">
+          <div class="slot no-padding">
+            <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="schedule-logo" />
+          </div>
+          <div class="slot"><div class="label-text">08:00</div></div>
+          <div class="slot"><div class="label-text">12:00</div></div>
+          <div class="slot"><div class="label-text">18:00</div></div>
+          <div class="slot"><div class="label-text">19:15</div></div>
+          <div class="slot"><div class="label-text">20:15</div></div>
+          <div class="slot"><div class="label-text">21:15</div></div>
+        </div>
+
+        <!-- Sunday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום ראשון</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>דרילים</div></div>
+          <div class="slot"><div>אימון בסיס</div></div>
+          <div class="slot"><div>MMA</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+
+        <!-- Monday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום שני</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>19:00<br/>NO GI</div></div>
+          <div class="slot"><div>האבקות</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום שלישי</div></div>
+          <div class="slot"><div>אימון בוקר</div></div>
+          <div class="slot"><div>אימון צהריים</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>19:15<br/>אימון פונקציונאלי</div></div>
+          <div class="slot"><div>19:30<br/>BJJ-GI</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום רביעי</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>18:30<br/>BJJ-GI</div></div>
+          <div class="slot double"><div>19:30<br/><br/>NO&nbsp;GI<br/>מתחילים<br/>מתקדמים</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום חמישי</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>אימון בסיס</div></div>
+          <div class="slot"><div>BJJ - GI</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+
+        <!-- Friday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום שישי</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot friday-highlight"><div>11:00<br/>מזרון פתוח</div></div>
+          <div class="slot"><div>12:00<br/>Mobility</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+
+        <!-- Saturday -->
+        <div class="day-column">
+          <div class="slot bold"><div>יום שבת</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+          <div class="slot"><div>.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="section testa">
+    <div class="wrapper testamonials">
+      <div class="spacere">
+        <h2>יש אנשים מכורים לספורט הזה</h2>
+      </div>
+      <div class="testemonials-wrap">
+        <div class="person">
+          <div class="testi-wrap">
+            <img src="/images/testimonial-yona.jpg" alt="תלמיד גיו גיטסו ברזילאי תלאביב" class="testi-img" />
+          </div>
+          <div class="testi-text">
+            <p>"כל אימון גומר אותך פיזית, אתה מסיים אותו מזיע ועייף אבל בתחושת הצלחה והישג. והתחושה הזאת מחזיקה כמה ימים"</p>
+            <div class="testa-name">יונה, מהנדס הנדסות</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="testi-wrap">
+            <img src="/images/testimonial-yonatan.jpg" alt="תמונה של יונתן - מתאמן במכון גיוגיטסו" class="testi-img" />
+          </div>
+          <div class="testi-text">
+            <p>"זה ממש שינה לי את החיים, חשבתי שאני שונא את כל סוגי הספורט ולנצח אשאר בטטה, אבל גיוגיוטסו מאתגר גם את הגוף וגם את המוח אז אני מכור"</p>
+            <div class="testa-name">יונתן, איש שיווק</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="testi-wrap">
+            <img src="/images/testimonial-simcha.jpg" alt="שמחה - חגורה כחולה" class="testi-img" />
+          </div>
+          <div class="testi-text">
+            <p>"עברתי בכמה מכונים בחיי אבל נשארתי אצל רועי נאמן כי מרגישים את המקצוענות ואת המסירות שלו, כל החיים שלו ג'יוגיטסו - מומחה מאוד גדול ומורה מצויין"</p>
+            <div class="testa-name">שמחה, כלכלן</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teacher -->
+  <div class="section teacher">
+    <div class="wrapper teacher">
+      <div class="text-wrapper">
+        <h2>רועי נאמן</h2>
+        <p class="paragraph-2">רועי נאמן – התמקצע בתורה במכון "באהה גרייסי פיטבול" בסן-דייגו בשנות ה-2000 המוקדמות. לאחר 8 שנים בקליפורניה בהם היתחרה והיתמקצע, חזר לארץ כחגורה שחורה, ייסד את טים פיטבול ישראל והחל ללמד את השיטה. כיום דאן 2 בג'יו-ג'יטסו תחת ג'ואו קוניה, דאן 3 תחת ריקרדו בובמן. רועי נאמן לוחם MMA מקצועני בעברו, עם ניסיון של למעלה מ-100 טורנירי הכנעות עם ובלי חליפה, זכה בעשרות מדליות בתחרויות בינלאומיות, וב 2007 זכה שלישי בעולם בסגנון No-Gi. מאמן ותיק ומוסמך וינגייט.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="/images/roi-teacher.jpg" width="465" alt="רועי נאמן מורה לגיוגיטסו ברזילאי בתל אביב לכל הרמות" class="teacher-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Now -->
+  <div class="section whynow">
+    <div class="footer-image">
+      <img src="/images/seminar-group.jpg" loading="lazy" alt="מתאמנים בסמינר MMA במכון גיוגיטסו" />
+    </div>
+    <div class="wrapper why-now">
+      <div>
+        <h3>למה להתחיל ללמוד עכשיו?</h3>
+        <p class="paragraph-2">כולנו עשינו את זה בעבר, מוצאים תירוצים וסיבות להמנע מפעילות גופנית. זה לא קל לפנות זמן לעצמנו, ולהשקיע בכושר ותנועה.<br/><br/>אנחנו מבינים כמה זה קשה למצוא זמן לעצמך בין העיסוקים בעבודה, בחיים ובמשפחה. אנו גם מבינים את התסכול כשאין זמן לאורח חיים בריא - אבל מגיע לך יותר.<br/><br/>אצלנו מתאמנים גברים ונשים שמכיניסים כושר, תנועתיות, קרביות וביטחון עצמי לחיים, מפתחים הרגלים חיוביים, מייצרים איזון פנימי ותחושה טובה בין אימון לאימון.</p>
+        <a href="#contact" class="main-cta">לתיאום אימון ניסיון</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- How to Start -->
+  <div class="section">
+    <div class="wrapper start">
+      <div class="title-wrap">
+        <h2>איך מתחילים?</h2>
+        <div class="text-block">זה בכלל לא מסובך ובשלושה שלבים פשוטים אפשר להתחיל להחזיר את האיזון לחיים:</div>
+      </div>
+      <div class="stag-er">
+        <div class="stage _01">
+          <div class="orange"><div class="big-no">01</div></div>
+          <h3 class="padd">שיחת התאמה &gt;&gt;</h3>
+          <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי שמזיז את כל הגוף.</p>
+        </div>
+        <div class="stage">
+          <div class="orange"><div class="big-no">02</div></div>
+          <h3 class="padd">אימון ניסיון &gt;&gt;</h3>
+          <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי שמזיז את כל הגוף.</p>
+        </div>
+        <div class="stage _03">
+          <div class="orange"><div class="big-no">03</div></div>
+          <h3 class="padd">התמדה ושיפור &gt;&gt;</h3>
+          <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי ושמזיז את כל הגוף.</p>
+        </div>
+        <div class="wide">
+          <a href="#contact" class="main-cta">לתיאום אימון ניסיון</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What You'll Learn -->
+  <div class="section no-margin">
+    <div class="wrapper what-learn">
+      <div class="title-wrap align-right">
+        <h2>מה לומדים בטים פיטבול</h2>
+        <div class="text-block">כושר, תנועתיות, קרביות וביטחון עצמי. מתאים לגברים ולנשים, לכל הרמות ולכל הגילאים – חובבני ותחרותי (חניכים זוכי מדליות בתחרויות שונות), קבוצות ושיעורים פרטיים.</div>
+      </div>
+      <div class="lessons-div">
+        <div class="lesson">
+          <img src="/images/lesson-base.jpg" alt="רועי נאמן מברך את תלמידיו בסוף שיעור" class="lesson-img" />
+          <h3>שיעורי בסיס</h3>
+          <p>העקרונות החשובים עליהם בנויה השיטה, החל מעמדות מוצא ועד ההכנעות הכי חשובות בספורט ועבור הגנה עצמית. איך להפיל, להשיג עמדת שליטה על הקרקע ולהכניע – ואיך להתגונן מפני כל אלה.</p>
+        </div>
+        <div class="lesson">
+          <img src="/images/lesson-advanced.jpg" alt="הדגמה של תרגיל מתקדם סוויפ" class="lesson-img" />
+          <h3>ג'יו ג'יטסו למתקדמים</h3>
+          <p>טכניקות מתקדמות להגדלת ארגז הכלים, יותר גלגולים (ה"קרבות" שלנו, בהתנגדות גבוהה) וקצב יותר מהיר.</p>
+        </div>
+        <div class="lesson">
+          <img src="/images/lesson-mma.jpg" alt="טייקדאון כולל אחיזה על סביב הגוף" class="lesson-img" />
+          <h3>MMA - אומנויות לחימה משולבות</h3>
+          <p>באימונים האלה אנחנו מוסיפים להיאבקות ולג'יו-ג'יטסו את מכות הידיים והרגליים, האיגרוף והמואי-תאי, וכמו כן את עבודת המכות על הקרקע. מתאים למקצוענים ולחובבנים, לאלה שרוצים להילחם עבור שכר ולאלה שמעוניינים לשפר את יכולת ההגנה העצמית.</p>
+        </div>
+        <div class="lesson">
+          <img src="/images/lesson-women.jpg" alt="נשים שמתאמנות באומנויות לחימה גיוגיטסו MMA" class="lesson-img" />
+          <h3>ג'יו ג'יטסו לנשים</h3>
+          <p>בהדרכת נטלי לוריא, האשה החגורה שחורה הראשונה בשיטה בישראל. (כמובן שהנשים מוזמנות גם לכלל האימונים).</p>
+        </div>
+        <div class="lesson">
+          <img src="/images/lesson-nogi.jpg" alt="תמונה מתוך אימון NO GI" class="lesson-img" />
+          <h3>שיעורים ללא חליפה - NO&nbsp;GI</h3>
+          <p>אימוני היאבקות הכנעות מתקדמים ללא חליפה, No-Gi. סגנון יותר חופשי ודינמי.</p>
+        </div>
+        <div class="lesson">
+          <img src="/images/lesson-kids.jpg" alt="ספורט ואומנויות לחימה לילדים" class="lesson-img" />
+          <h3>ג'יוגיטסו לילדים</h3>
+          <p>כל מה שטוב בג'יו-ג'יטסו, עם דגש על כבוד הדדי, משמעת, שיפור הריכוז והביטחון העצמי. אף פעם לא מוקדם מדי להתחיל.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why BJJ -->
+  <div class="section reasons-section">
+    <div class="wrapper reasons-wrap">
+      <div class="title-wrap">
+        <h2>למה ג'יו גיטסו?</h2>
+      </div>
+      <div class="reasons-grid">
+        <div class="reason">
+          <div class="orange"><div class="big-no">01</div></div>
+          <div class="text-div">
+            <h3>אימון אינטנסיבי</h3>
+            <p>האימון מתרחש ברובו על הקרקע ומפעיל הרבה שרירים במקביל, כך נוצר אימון אפקטיבי שמזיז את כל הגוף.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <div class="orange"><div class="big-no">02</div></div>
+          <div class="text-div">
+            <h3>ביטול מימד הכוח</h3>
+            <p>היתרון הגדול של הספורט הוא שלא צריך להיות הכי חזק בשביל לנצח, טכניקה טובה מנצחת כוח.</p>
+          </div>
+        </div>
+        <div class="reason">
+          <div class="orange"><div class="big-no">03</div></div>
+          <div class="text-div">
+            <h3>מאתגר את השכל</h3>
+            <p>האימון המנטלי והחידות הבלתי פוסקות מעסיקות יותר מהקושי הפיזי. ג'יו-ג'יטסו זה בית-ספר לפתרון בעיות</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="wide">
+          <a href="#contact" class="main-cta">לתיאום אימון ניסיון</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Group photo -->
+  <div style="display:block;">
+    <img src="/images/group-photo.jpg" loading="lazy" alt="אנשים מהמכון של רועי נאמן מסתכלים למצלמה אחרי אימון" width="800" style="width:100%;" />
+  </div>
+
+  <!-- Contact -->
+  <div>
+    <div id="contact" class="section contact">
+      <div class="wrapper contact">
+        <div class="contact-inner">
+          <div class="contact-logo-wrap">
+            <img src="/images/logo.svg" alt="פיטבול ישראל הלוגו" class="contact-logo" />
+          </div>
+          <div>
+            <h3>איך מגיעים אלינו?</h3>
+            <p class="paragraph-2">רחוב בן שמן 4, תל אביב<br/>טלפון <a href="tel:+972542042035" class="link">0542042035</a></p>
+            <div class="spacer"></div>
+            <h3>לתיאום אימון ניסיון &gt;&gt;</h3>
+            <div class="contact-links">
+              <a href="https://wa.me/972542042035" class="link-block">
+                <img src="/images/icon-whatsapp.svg" alt="ווטצאפ" class="link-icon" />
+                <div>whatsapp</div>
+              </a>
+              <a href="tel:+972542042035" class="link-block">
+                <img src="/images/icon-phone.svg" alt="טלפון" class="link-icon" />
+                <div>טלפון</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="map-div">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13523.098051360092!2d34.794556!3d32.075347!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4b0e76055d9542d1!2sRoy%20Neeman%20-%20Team%20Pitbull%20Israel%20-%20BJJ!5e0!3m2!1sen!2sil!4v1635402442509!5m2!1sen!2sil"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>רועי נאמן ג'יו ג'יטסו תל אביב MMA פיטבול</div>
+    </div>
+  </div>
+</Layout>
