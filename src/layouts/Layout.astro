@@ -832,16 +832,107 @@ const {
     display: flex;
   }
 
-  /* Scroll animation helper */
-  .scroll-animate {
+  /* Scroll-triggered fade-in animations */
+  .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   }
 
-  .scroll-animate.visible {
+  .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-in-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Stagger children */
+  .stagger > .fade-in:nth-child(1) { transition-delay: 0s; }
+  .stagger > .fade-in:nth-child(2) { transition-delay: 0.12s; }
+  .stagger > .fade-in:nth-child(3) { transition-delay: 0.24s; }
+  .stagger > .fade-in:nth-child(4) { transition-delay: 0.36s; }
+  .stagger > .fade-in:nth-child(5) { transition-delay: 0.48s; }
+  .stagger > .fade-in:nth-child(6) { transition-delay: 0.6s; }
+
+  /* Hero entrance — no scroll needed */
+  .hero-entrance {
+    animation: heroFadeUp 1s ease-out both;
+  }
+
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Subtle hover lift on lesson cards */
+  .lesson:hover .lesson-img {
+    transform: scale(1.03);
+  }
+
+  .lesson-img {
+    transition: transform 0.4s ease;
+  }
+
+  /* CTA pulse on hero */
+  .hero-cta-pulse {
+    animation: ctaPulse 2.5s ease-in-out 1.5s 3;
+  }
+
+  @keyframes ctaPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(196, 78, 10, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(196, 78, 10, 0); }
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in, .fade-in-left, .fade-in-right, .fade-in-scale {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .hero-entrance {
+      animation: none;
+    }
+    .hero-cta-pulse {
+      animation: none;
+    }
   }
 
   /* ===================== */
